@@ -9,6 +9,7 @@ export default function Header() {
   const [mounted, setMounted] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [platformsOpen, setPlatformsOpen] = useState(false)
+  const [industriesOpen, setIndustriesOpen] = useState(false)
 
   useEffect(() => {
     setMounted(true)
@@ -52,8 +53,16 @@ export default function Header() {
     { name: 'Custom Ecommerce SEO', href: '/platforms/custom-ecommerce-seo' },
   ]
 
+  const industryPages = [
+    { name: 'Fashion / Clothing', href: '/industries/fashion-ecommerce-seo' },
+    { name: 'Electronics & Gadgets', href: '/industries/electronics-ecommerce-seo' },
+    { name: 'Beauty & Skincare', href: '/industries/beauty-skincare-ecommerce-seo' },
+    { name: 'Furniture & Home Decor', href: '/industries/furniture-home-decor-seo' },
+    { name: 'Health & Supplements', href: '/industries/health-supplements-ecommerce-seo' },
+    { name: 'Jewelry & Accessories', href: '/industries/jewelry-accessories-ecommerce-seo' },
+  ]
+
   const navItems = [
-    { name: 'Industries', href: '/industries' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Contact', href: '/contact' },
   ]
@@ -185,6 +194,54 @@ export default function Header() {
                       }}
                     >
                       {platform.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Industries Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setIndustriesOpen(true)}
+              onMouseLeave={() => setIndustriesOpen(false)}
+            >
+              <Link
+                href="/industries"
+                className="px-4 py-2 rounded-lg text-sm font-medium transition-colors relative group"
+                style={{ color: 'var(--text)' }}
+              >
+                <span className="group-hover:opacity-70 transition-opacity">Industries</span>
+                <svg className="w-3 h-3 inline-block ml-1 group-hover:opacity-70 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+
+              {industriesOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-72 rounded-lg shadow-lg overflow-hidden"
+                  style={{
+                    background: 'var(--surface)',
+                    border: '1px solid var(--border)',
+                  }}
+                >
+                  {industryPages.map((industry, index) => (
+                    <Link
+                      key={index}
+                      href={industry.href}
+                      className="block px-4 py-3 text-sm font-medium transition-colors"
+                      style={{
+                        color: 'var(--text)',
+                        borderBottom: index < industryPages.length - 1 ? '1px solid var(--border)' : 'none',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = 'var(--card)'
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = 'transparent'
+                      }}
+                    >
+                      {industry.name}
                     </Link>
                   ))}
                 </div>
