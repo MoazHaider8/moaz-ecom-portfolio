@@ -102,47 +102,53 @@ export default function HomePage() {
       name: 'Shopify SEO', 
       description: 'Expert SEO optimization for Shopify stores across all industries and markets.',
       color: '#95BF47',
-      fixes: ['Theme bloat', 'Duplicate content', 'URL structure']
+      fixes: ['Theme bloat', 'Duplicate content', 'URL structure'],
+      href: '/platforms/shopify-seo'
     },
     { 
       name: 'WooCommerce SEO', 
       description: 'WordPress ecommerce SEO services tailored for WooCommerce platforms.',
       color: '#7F54B3',
-      fixes: ['Plugin conflicts', 'Speed optimization', 'Schema markup']
+      fixes: ['Plugin conflicts', 'Speed optimization', 'Schema markup'],
+      href: '/platforms/woocommerce-seo'
     },
     { 
       name: 'Magento SEO', 
       description: 'Advanced technical SEO for Magento and Adobe Commerce stores.',
       color: '#EE672F',
-      fixes: ['Layered navigation', 'Indexation control', 'Performance']
+      fixes: ['Layered navigation', 'Indexation control', 'Performance'],
+      href: '/platforms/magento-seo'
     },
     { 
       name: 'BigCommerce SEO', 
       description: 'Strategic SEO implementation for BigCommerce enterprise stores.',
       color: '#1D4E89',
-      fixes: ['Faceted URLs', 'Pagination', 'Category structure']
+      fixes: ['Faceted URLs', 'Pagination', 'Category structure'],
+      href: '/platforms/bigcommerce-seo'
     },
     { 
       name: 'Wix SEO (Ecommerce)', 
       description: 'SEO optimization for Wix ecommerce stores despite platform limitations.',
       color: '#0C6EFC',
-      fixes: ['Platform limits', 'Mobile optimization', 'Speed issues']
+      fixes: ['Platform limits', 'Mobile optimization', 'Speed issues'],
+      href: '/platforms/wix-seo'
     },
     { 
       name: 'Custom Ecommerce SEO', 
       description: 'Tailored SEO strategies for custom-built ecommerce platforms.',
       color: '#6366F1',
-      fixes: ['Technical audits', 'Custom solutions', 'Scalability']
+      fixes: ['Technical audits', 'Custom solutions', 'Scalability'],
+      href: '/platforms/custom-ecommerce-seo'
     },
   ]
 
   const industries = [
-    { name: 'Fashion & Clothing Brands', description: 'SEO strategies for apparel, accessories, and fashion ecommerce brands.', challenge: 'High competition, seasonal trends' },
-    { name: 'Electronics & Gadgets Stores', description: 'Technical product SEO for consumer electronics and tech retailers.', challenge: 'Spec-driven content, price competition' },
-    { name: 'Beauty & Skincare Ecommerce', description: 'Content-driven SEO for beauty, cosmetics, and skincare online stores.', challenge: 'Influencer market, ingredient focus' },
-    { name: 'Home Decor & Lifestyle Stores', description: 'Visual and editorial SEO for home goods and lifestyle brands.', challenge: 'Visual search, style categorization' },
-    { name: 'Furniture & Interior Products', description: 'Category-focused SEO for furniture and interior design ecommerce.', challenge: 'Large product catalogs, shipping complexity' },
-    { name: 'Health & Supplements Brands', description: 'Compliance-aware SEO for health, wellness, and supplement stores.', challenge: 'Regulatory compliance, claims restrictions' },
+    { name: 'Fashion & Clothing Brands', description: 'SEO strategies for apparel, accessories, and fashion ecommerce brands.', challenge: 'High competition, seasonal trends', href: '/industries/fashion-ecommerce-seo' },
+    { name: 'Electronics & Gadgets Stores', description: 'Technical product SEO for consumer electronics and tech retailers.', challenge: 'Spec-driven content, price competition', href: '/industries/electronics-ecommerce-seo' },
+    { name: 'Beauty & Skincare Ecommerce', description: 'Content-driven SEO for beauty, cosmetics, and skincare online stores.', challenge: 'Influencer market, ingredient focus', href: '/industries/beauty-skincare-ecommerce-seo' },
+    { name: 'Jewelry & Accessories', description: 'Visual and editorial SEO for jewelry, accessories, and luxury items.', challenge: 'Visual search, style categorization', href: '/industries/jewelry-accessories-ecommerce-seo' },
+    { name: 'Furniture & Interior Products', description: 'Category-focused SEO for furniture and interior design ecommerce.', challenge: 'Large product catalogs, shipping complexity', href: '/industries/furniture-home-decor-seo' },
+    { name: 'Health & Supplements Brands', description: 'Compliance-aware SEO for health, wellness, and supplement stores.', challenge: 'Regulatory compliance, claims restrictions', href: '/industries/health-supplements-ecommerce-seo' },
   ]
 
   const locations = [
@@ -474,8 +480,9 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
               {platforms.map((platform, index) => (
-                <div
+                <Link
                   key={index}
+                  href={platform.href}
                   className="card p-6 group cursor-pointer"
                 >
                   <div
@@ -508,7 +515,7 @@ export default function HomePage() {
                       </span>
                     ))}
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 
@@ -537,8 +544,8 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
               {industries.map((industry, index) => (
-                <div key={index} className="card p-6">
-                  <h3 className="text-lg font-bold mb-2" style={{ color: 'var(--text)' }}>
+                <Link key={index} href={industry.href} className="card p-6 group cursor-pointer">
+                  <h3 className="text-lg font-bold mb-2 group-hover:gradient-text transition-all" style={{ color: 'var(--text)' }}>
                     {industry.name}
                   </h3>
                   <p className="text-sm mb-4 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
@@ -552,7 +559,7 @@ export default function HomePage() {
                       {industry.challenge}
                     </span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 

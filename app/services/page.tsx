@@ -250,12 +250,12 @@ export default function ServicesPage() {
   ]
 
   const platforms = [
-    { name: 'Shopify', color: '#95BF47' },
-    { name: 'WooCommerce', color: '#7F54B3' },
-    { name: 'Magento', color: '#EE672F' },
-    { name: 'BigCommerce', color: '#1D4E89' },
-    { name: 'Wix', color: '#0C6EFC' },
-    { name: 'Custom CMS', color: '#6366F1' },
+    { name: 'Shopify', color: '#95BF47', href: '/platforms/shopify-seo' },
+    { name: 'WooCommerce', color: '#7F54B3', href: '/platforms/woocommerce-seo' },
+    { name: 'Magento', color: '#EE672F', href: '/platforms/magento-seo' },
+    { name: 'BigCommerce', color: '#1D4E89', href: '/platforms/bigcommerce-seo' },
+    { name: 'Wix', color: '#0C6EFC', href: '/platforms/wix-seo' },
+    { name: 'Custom CMS', color: '#6366F1', href: '/platforms/custom-ecommerce-seo' },
   ]
 
   const faqs = [
@@ -757,7 +757,7 @@ export default function ServicesPage() {
               {platforms.map((platform, index) => (
                 <Link
                   key={index}
-                  href="/platforms"
+                  href={platform.href}
                   className="card p-5 text-center group hover:shadow-lg transition-all hover:-translate-y-1"
                 >
                   <div
