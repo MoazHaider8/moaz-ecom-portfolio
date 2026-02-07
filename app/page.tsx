@@ -12,10 +12,10 @@ export default function HomePage() {
     '@graph': [
       {
         '@type': 'Person',
-        '@id': 'https://www.moazhaider.com/#person',
+        '@id': 'https://moazhaider.com/#person',
         name: 'Moaz Haider',
         jobTitle: 'Ecommerce SEO Consultant',
-        url: 'https://www.moazhaider.com',
+        url: 'https://moazhaider.com',
         sameAs: [
           'https://www.linkedin.com/in/moaz-haider/',
           'https://www.facebook.com/moaz.haider.14',
@@ -25,18 +25,18 @@ export default function HomePage() {
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://www.moazhaider.com/#website',
-        url: 'https://www.moazhaider.com',
+        '@id': 'https://moazhaider.com/#website',
+        url: 'https://moazhaider.com',
         name: 'Moaz Haider - Ecommerce SEO Consultant',
-        publisher: { '@id': 'https://www.moazhaider.com/#person' },
+        publisher: { '@id': 'https://moazhaider.com/#person' },
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://www.moazhaider.com/#webpage',
-        url: 'https://www.moazhaider.com',
+        '@id': 'https://moazhaider.com/#webpage',
+        url: 'https://moazhaider.com',
         name: 'Ecommerce SEO Consultant | Moaz Haider',
-        isPartOf: { '@id': 'https://www.moazhaider.com/#website' },
-        about: { '@id': 'https://www.moazhaider.com/#person' },
+        isPartOf: { '@id': 'https://moazhaider.com/#website' },
+        about: { '@id': 'https://moazhaider.com/#person' },
         description: 'Expert ecommerce SEO consultant specializing in strategic SEO for online stores across international markets.',
       },
       {
