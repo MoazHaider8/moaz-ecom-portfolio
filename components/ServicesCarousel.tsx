@@ -146,7 +146,7 @@ export default function ServicesCarousel() {
                           stroke="url(#gradient)"
                           strokeWidth="8"
                           fill="none"
-                          strokeDasharray={`${service.score * 3.51} 351`}
+                          strokeDasharray={`${(service.score ?? 0) * 3.51} 351`}
                           strokeLinecap="round"
                         />
                         <defs>
@@ -157,7 +157,7 @@ export default function ServicesCarousel() {
                         </defs>
                       </svg>
                       <div className="absolute inset-0 flex flex-col items-center justify-center">
-                        <span className="text-4xl font-bold text-white">{service.score}</span>
+                        <span className="text-4xl font-bold text-white">{service.score ?? 0}</span>
                         <span className="text-xs text-purple-300">SEO Score</span>
                       </div>
                     </div>
