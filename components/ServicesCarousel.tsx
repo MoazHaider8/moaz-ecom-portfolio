@@ -193,7 +193,7 @@ export default function ServicesCarousel() {
                     </div>
                     <div className="flex items-center justify-between px-4 py-3 rounded-xl" style={{ background: 'rgba(100, 70, 140, 0.25)' }}>
                       <div>
-                        <div className="text-2xl font-bold text-purple-300">{service.keywords.toLocaleString()}+</div>
+                        <div className="text-2xl font-bold text-purple-300">{(service.keywords ?? 0).toLocaleString()}+</div>
                         <div className="text-[10px] text-gray-400">Keywords Researched</div>
                       </div>
                       <div className="flex items-center gap-1">
@@ -226,7 +226,7 @@ export default function ServicesCarousel() {
                                 <path d="M6 1L7.5 4.5L11 5L8.5 7.5L9 11L6 9L3 11L3.5 7.5L1 5L4.5 4.5L6 1Z"/>
                               </svg>
                             ))}
-                            <span className="text-[10px] text-purple-300 ml-1">{service.rating}</span>
+                            <span className="text-[10px] text-purple-300 ml-1">{service.rating ?? 0}</span>
                           </div>
                         </div>
                       </div>
