@@ -14,6 +14,37 @@ export interface CaseStudy {
     platforms?: string[]
     industries?: string[]
   }
+  
+  // Extended fields for premium case studies
+  category?: string
+  platform?: string
+  industry?: string
+  timeline?: string
+  primaryKPI?: string
+  clientContext?: string
+  challenges?: Array<{
+    title: string
+    description: string
+  }>
+  strategyPillars?: Array<{
+    title: string
+    description: string
+  }>
+  executionSteps?: Array<{
+    phase: string
+    title: string
+    description: string
+  }>
+  keyTakeaways?: string[]
+  learnings?: {
+    whatWorked: string[]
+    whatDidnt: string[]
+    surprises?: string[]
+  }
+  faqs?: Array<{
+    question: string
+    answer: string
+  }>
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -32,6 +63,110 @@ export const caseStudies: CaseStudy[] = [
       services: ['/services/category-page-seo', '/services/ecommerce-content-strategy'],
       industries: ['/industries/fashion-ecommerce-seo'],
     },
+    category: 'Fashion Ecommerce',
+    platform: 'Shopify Plus',
+    industry: 'Fashion & Apparel',
+    timeline: '4 months',
+    primaryKPI: 'Organic category page traffic',
+    clientContext: `Mid-sized fashion brand with 300+ products across 8 main categories. Strong brand presence but poor organic visibility. 70% of traffic came from paid channels. Category pages were competing with each other for the same keywords, diluting ranking potential.`,
+    challenges: [
+      {
+        title: 'Severe Keyword Cannibalization',
+        description: `Multiple category pages targeting identical keywords ("women's dresses", "summer dresses", "casual dresses"). Google couldn't determine which page to rank, causing all pages to underperform.`
+      },
+      {
+        title: 'Flat Information Architecture',
+        description: `All categories existed at the same hierarchical level with no parent-child relationships. This structure didn't align with how users actually search for fashion products.`
+      },
+      {
+        title: 'Thin Category Content',
+        description: `Category pages consisted only of product grids with no unique content, making it difficult for search engines to understand topical relevance and differentiate between similar categories.`
+      }
+    ],
+    strategyPillars: [
+      {
+        title: 'Topical Mapping & Hierarchy',
+        description: `Created a comprehensive keyword-to-intent map. Identified primary categories (Women's, Men's, Accessories) as top-level, with subcategories (Tops, Dresses, Outerwear) nested beneath. Mapped keywords to specific pages based on search intent and competition.`
+      },
+      {
+        title: 'Content Differentiation',
+        description: `Developed unique editorial content for each category page: buying guides, style tips, fabric information, and seasonal trends. This made each page contextually unique while targeting distinct keyword sets.`
+      },
+      {
+        title: 'Internal Linking Architecture',
+        description: `Implemented strategic internal linking: parent categories link to child categories, related categories cross-link appropriately, and product pages link back to multiple relevant category levels.`
+      }
+    ],
+    executionSteps: [
+      {
+        phase: 'Phase 1',
+        title: 'Audit & Analysis (Weeks 1-2)',
+        description: `Conducted comprehensive keyword cannibalization audit using Screaming Frog and Search Console. Identified 23 instances where 3+ pages competed for the same keyword cluster. Mapped current site structure and created topical hierarchy blueprint.`
+      },
+      {
+        phase: 'Phase 2',
+        title: 'Restructure Implementation (Weeks 3-8)',
+        description: `Consolidated redundant categories through 301 redirects. Created parent-child category relationships. Reassigned products to the most appropriate categories. Implemented breadcrumb navigation reflecting new hierarchy.`
+      },
+      {
+        phase: 'Phase 3',
+        title: 'Content Development (Weeks 6-12)',
+        description: `Wrote unique 500-800 word editorial sections for each main category page. Created 200-300 word descriptions for subcategory pages. Developed seasonal buying guides. Optimized meta titles and descriptions for keyword clarity.`
+      },
+      {
+        phase: 'Phase 4',
+        title: 'Technical Implementation (Weeks 10-14)',
+        description: `Deployed schema markup (BreadcrumbList, CollectionPage). Optimized internal linking patterns. Created XML sitemap with priority levels reflecting category hierarchy. Implemented faceted navigation with crawl controls.`
+      },
+      {
+        phase: 'Phase 5',
+        title: 'Monitoring & Iteration (Weeks 14-16)',
+        description: `Tracked rankings for target keywords across all category levels. Monitored organic traffic patterns. Adjusted internal linking based on performance data. Fine-tuned category descriptions based on user engagement metrics.`
+      }
+    ],
+    keyTakeaways: [
+      `Keyword cannibalization is silent but deadly—multiple pages competing for the same terms will always underperform versus one authoritative page`,
+      `Clear category hierarchy helps both users and search engines understand topical relationships and content organization`,
+      `Unique editorial content on category pages dramatically improves topical relevance signals and provides ranking differentiation`,
+      `Strategic internal linking distributes authority and reinforces topical relationships between parent and child categories`,
+      `Technical SEO elements (schema, breadcrumbs, XML sitemaps) amplify the impact of structural improvements`
+    ],
+    learnings: {
+      whatWorked: [
+        `Creating parent-child category relationships based on actual keyword research (not just intuition) eliminated cannibalization`,
+        `Editorial content sections with seasonal updates gave us fresh content signals without constant product changes`,
+        `Breadcrumb schema markup improved SERP visibility and click-through rates by making page hierarchy obvious`,
+        `Redirecting redundant categories consolidated ranking signals and provided immediate traffic lift to target pages`
+      ],
+      whatDidnt: [
+        `Initial automated product assignments placed items in wrong categories—required manual review and correction`,
+        `Early internal linking was too aggressive (too many links per page)—had to dial back to maintain user experience`,
+        `First content drafts were too promotional—had to rewrite with more educational, helpful tone`
+      ],
+      surprises: [
+        `Subcategory pages started ranking for long-tail keywords faster than expected (within 3 weeks of content deployment)`,
+        `Users actually read the editorial content—average time on category pages increased 89% after content was added`,
+        `Several "minor" categories became top traffic drivers once given proper topical clarity and unique content`
+      ]
+    },
+    faqs: [
+      {
+        question: `How did you decide which category pages to keep versus consolidate?`,
+        answer: `We used three criteria: (1) Monthly search volume—categories targeting keywords with <100 searches/month were consolidation candidates. (2) Keyword uniqueness—if two categories targeted >70% identical keywords, we merged them. (3) Product count—categories with <15 products were folded into parent categories unless they had strong search demand.`
+      },
+      {
+        question: `What happened to the URLs of consolidated categories?`,
+        answer: `All consolidated category URLs were redirected (301) to the most relevant remaining category page. We monitored redirect chains to ensure proper path length and maintained redirect mapping in a spreadsheet for future reference. Rankings and link equity transferred to target pages within 2-3 weeks.`
+      },
+      {
+        question: `How do you prevent cannibalization as new products and categories are added?`,
+        answer: `We created a category launch checklist: (1) Keyword research confirms unique topical space. (2) New category doesn't overlap >30% with existing category keywords. (3) Content template ensures unique editorial angle. (4) Internal linking plan is defined before launch. (5) Parent category assignment is clear. This process prevents cannibalization from reoccurring.`
+      },
+      {
+        question: `Can this approach work for smaller fashion brands with fewer categories?`,
+        answer: `Absolutely. Even brands with 10-20 products can benefit from clear category structure and unique content. The principles scale down—you just have fewer tiers in the hierarchy. Smaller brands often see faster results because there are fewer pages to optimize and less legacy mess to clean up.`
+      }
+    ]
   },
   {
     slug: 'shopify-technical-crawl-budget-fix',

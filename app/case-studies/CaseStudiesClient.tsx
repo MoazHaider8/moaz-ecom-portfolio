@@ -527,19 +527,23 @@ export default function CaseStudiesClient() {
                   ))}
                 </div>
 
-              <div
+              <Link
+                  href={`/case-studies/${study.slug}`}
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '0.5rem',
-                    color: 'var(--text-secondary)',
+                    color: 'var(--accent)',
                     fontWeight: '600',
                     fontSize: '0.9375rem',
-                    opacity: 0.5,
+                    textDecoration: 'none',
                   }}
                 >
-                  Coming soon
-                </div>
+                  Read case study
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
 
                 {/* Decorative Corner */}
                 <div
@@ -696,20 +700,24 @@ export default function CaseStudiesClient() {
                   </div>
 
                   {/* Link */}
-                  <div
+                  <Link
+                    href={`/case-studies/${study.slug}`}
                     style={{
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: '0.5rem',
-                      color: 'var(--text-secondary)',
+                      color: 'var(--accent)',
                       fontWeight: '600',
                       fontSize: '0.875rem',
-                      opacity: 0.5,
+                      textDecoration: 'none',
                       marginTop: 'auto',
                     }}
                   >
-                    Coming soon
-                  </div>
+                    View case study
+                    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
                 </div>
               ))}
             </div>
