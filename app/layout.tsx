@@ -93,8 +93,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                const theme = localStorage.getItem('theme') || 
-                  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day');
+                const theme = localStorage.getItem('theme') || 'night';
                 document.documentElement.setAttribute('data-theme', theme);
               })();
             `,
