@@ -51,7 +51,7 @@ Message: ${formData.message || 'N/A'}
               type="text"
               id="name"
               required
-              className="h-10"
+              className="h-12"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               placeholder="John Doe"
@@ -64,7 +64,7 @@ Message: ${formData.message || 'N/A'}
               type="email"
               id="email"
               required
-              className="h-10"
+              className="h-12"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               placeholder="john@example.com"
@@ -78,7 +78,7 @@ Message: ${formData.message || 'N/A'}
             type="url"
             id="website"
             required
-            className="h-10"
+            className="h-12"
             value={formData.website}
             onChange={(e) => setFormData({ ...formData, website: e.target.value })}
             placeholder="https://yourstore.com"
@@ -90,7 +90,7 @@ Message: ${formData.message || 'N/A'}
           <select
             id="platform"
             required
-            className="h-10"
+            className="h-12"
             value={formData.platform}
             onChange={(e) => setFormData({ ...formData, platform: e.target.value })}
           >
@@ -129,7 +129,7 @@ Message: ${formData.message || 'N/A'}
 
         <button
           type="submit"
-          className="btn btn-primary w-full h-10"
+          className="btn btn-primary w-full h-12"
           disabled={submitted}
         >
           {submitted ? (
