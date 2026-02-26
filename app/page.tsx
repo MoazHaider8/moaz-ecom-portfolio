@@ -226,7 +226,7 @@ export default function HomePage() {
         {/* --------------------------------------------------
             SECTION 3 — TRUSTED BY
         -------------------------------------------------- */}
-        <section className="py-16" style={{ background: 'var(--surface)', overflow: 'hidden', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
+        <section className="py-12" style={{ background: 'var(--surface)', overflow: 'hidden', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
           <div className="container">
             <div className="text-center mb-10">
               <p className="text-xs font-semibold uppercase tracking-[0.3em]" style={{ color: 'var(--accent)' }}>
@@ -246,7 +246,7 @@ export default function HomePage() {
         {/* --------------------------------------------------
             SECTION 4 — ABOUT BENTO GRID
         -------------------------------------------------- */}
-        <section className="py-24 relative overflow-hidden" style={{ background: 'var(--bg)' }} id="about" itemProp="description">
+        <section className="py-16 relative overflow-hidden" style={{ background: 'var(--bg)' }} id="about" itemProp="description">
           <div className="container max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <span className="inline-flex items-center px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-[0.2em] mb-6" style={{ border: '1px solid var(--border)', color: 'var(--accent)', background: 'var(--accent-light)' }}>
@@ -322,7 +322,7 @@ export default function HomePage() {
         {/* --------------------------------------------------
             SECTION 5 — SERVICES TABS
         -------------------------------------------------- */}
-        <section className="py-24 relative" style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }} id="services">
+        <section className="py-16 relative" style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }} id="services">
           <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, var(--border) 0.5px, transparent 0)', backgroundSize: '48px 48px', opacity: 0.15 }} />
           <div className="container max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center mb-16">
@@ -350,7 +350,7 @@ export default function HomePage() {
         {/* --------------------------------------------------
             SECTION 6 — PLATFORMS
         -------------------------------------------------- */}
-        <section className="py-24 relative overflow-hidden" style={{ background: 'var(--bg)' }} id="platforms">
+        <section className="py-16 relative overflow-hidden" style={{ background: 'var(--bg)' }} id="platforms">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none" style={{ background: 'radial-gradient(circle, var(--accent-glow), transparent 70%)', opacity: 0.3 }} />
           <div className="container max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center mb-16">
@@ -398,7 +398,7 @@ export default function HomePage() {
         {/* --------------------------------------------------
             SECTION 7 — INDUSTRIES
         -------------------------------------------------- */}
-        <section className="py-24 relative" style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }} id="industries">
+        <section className="py-16 relative" style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }} id="industries">
           <div className="container max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <span className="inline-flex items-center px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-[0.2em] mb-6" style={{ border: '1px solid var(--border)', color: 'var(--accent)', background: 'var(--accent-light)' }}>
@@ -450,7 +450,7 @@ export default function HomePage() {
         {/* --------------------------------------------------
             SECTION 9 — INTERNATIONAL MARKETS
         -------------------------------------------------- */}
-        <section className="py-24 relative overflow-hidden" style={{ background: 'var(--bg)' }} id="international">
+        <section className="py-16 relative overflow-hidden" style={{ background: 'var(--bg)' }} id="international">
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] pointer-events-none" style={{ background: 'radial-gradient(circle, var(--accent-glow), transparent 70%)', opacity: 0.2 }} />
           <div className="container max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center mb-16">
@@ -488,7 +488,7 @@ export default function HomePage() {
         {/* --------------------------------------------------
             SECTION 10 — PROCESS
         -------------------------------------------------- */}
-        <section className="py-24 relative" style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }} id="process">
+        <section className="py-16 relative" style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }} id="process">
           <div className="container max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <span className="inline-flex items-center px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-[0.2em] mb-6" style={{ border: '1px solid var(--border)', color: 'var(--accent)', background: 'var(--accent-light)' }}>
@@ -530,7 +530,7 @@ export default function HomePage() {
         {/* --------------------------------------------------
             SECTION 11 — TESTIMONIALS
         -------------------------------------------------- */}
-        <section className="py-24 relative overflow-hidden" style={{ background: 'var(--bg)' }} id="testimonials">
+        <section className="py-16 relative overflow-hidden" style={{ background: 'var(--bg)' }} id="testimonials">
           <div className="absolute top-0 left-0 w-[600px] h-[600px] pointer-events-none" style={{ background: 'radial-gradient(circle, var(--accent-glow), transparent 70%)', opacity: 0.2 }} />
           <div className="container max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center mb-16">
@@ -597,7 +597,7 @@ export default function HomePage() {
         {/* --------------------------------------------------
             SECTION 12 — FAQ
         -------------------------------------------------- */}
-        <section className="py-24 relative" style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }} id="faq">
+        <section className="py-16 relative" style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }} id="faq">
           <div className="container max-w-3xl mx-auto px-6">
             <div className="text-center mb-16">
               <span className="inline-flex items-center px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-[0.2em] mb-6" style={{ border: '1px solid var(--border)', color: 'var(--accent)', background: 'var(--accent-light)' }}>
@@ -614,7 +614,7 @@ export default function HomePage() {
         {/* --------------------------------------------------
             SECTION 13 — FINAL CTA
         -------------------------------------------------- */}
-        <section className="py-32 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
+        <section className="py-20 relative overflow-hidden" style={{ background: 'var(--bg)' }}>
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]" style={{ background: 'radial-gradient(circle, var(--accent-glow), transparent 60%)', opacity: 0.5 }} />
             <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, var(--border) 0.5px, transparent 0)', backgroundSize: '48px 48px', opacity: 0.2 }} />
@@ -642,7 +642,7 @@ export default function HomePage() {
         {/* --------------------------------------------------
             SECTION 14 — AUDIT FORM
         -------------------------------------------------- */}
-        <section className="py-24 relative" style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)' }} id="audit-form">
+        <section className="py-16 relative" style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)' }} id="audit-form">
           <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, var(--border) 0.5px, transparent 0)', backgroundSize: '48px 48px', opacity: 0.15 }} />
           <div className="container max-w-3xl mx-auto px-6 relative z-10">
             <div className="text-center mb-12">
